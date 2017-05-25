@@ -26,7 +26,7 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 
 // Database configuration with mongoose
-mongoose.connect("mongodb://heroku_q6dz8j24:mvjltvv262pb7f9ftr9bc5hemv@dsl51941.mlab.com:51941/heroku_q6dz8j24");
+mongoose.connect((process.env.heroku_q6dz8j24:mvjltvv262pb7f9ftr9bc5hemv@dsl51941.mlab.com:51941/heroku_q6dz8j24 || "mongodb://localhost/sportsnews"));
 
 // mLab-mongodb_uri: mongodb://heroku_q6dz8j24:mvjltvv262pb7f9ftr9bc5hemv@dsl51941.mlab.com:51941/heroku_q6dz8j24
 
