@@ -26,7 +26,10 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 
 // Database configuration with mongoose
-mongoose.connect("mongodb://heroku_lg0z86m5:h95ojgpfs759cr3676jvfttm@dsl53051/heroku_lg0z86m5");
+mongoose.connect("mongodb://heroku_q6dz8j24:mvjltvv262pb7f9ftr9bc5hemv@dsl51941.mlab.com:51941/heroku_q6dz8j24");
+
+// mLab-mongodb_uri: mongodb://heroku_q6dz8j24:mvjltvv262pb7f9ftr9bc5hemv@dsl51941.mlab.com:51941/heroku_q6dz8j24
+
 var db = mongoose.connection;
 
 // Show any mongoose errors
