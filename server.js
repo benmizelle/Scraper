@@ -3,9 +3,9 @@ var bodyParser = require("body-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
 var mongo = require("mongodb");
-var dataURL = process.env.MONGOLAB_URI;
 var Note = require("./models/Note.js");
 var Article = require("./models/Article.js");
+var MONGODB_URI = "mongodb://heroku_q6dz8j24:mvjltvv262pb7f9ftr9bc5hemv@dsl51941.mlab.com:51941/heroku_q6dz8j24"
 
 // scraping tools
 // ===============================================================================================
