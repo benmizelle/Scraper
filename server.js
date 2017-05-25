@@ -12,7 +12,7 @@ var cheerio = require("cheerio");
 // Set mongoose to leverage built in JavaScript ES6 Promises
 mongoose.Promise = Promise;
 
-var PORT = process.env.PORT || 8080;
+var port = process.env.port || 8080;
 var app = express();
 
 
@@ -26,7 +26,7 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 
 // Database configuration with mongoose
-mongoose.connect((process.env.heroku_q6dz8j24:mvjltvv262pb7f9ftr9bc5hemv@dsl51941.mlab.com:51941/heroku_q6dz8j24 || "mongodb://localhost/sports"));
+mongoose.connect((process.env.MONGODB_URI || "mongodb://localhost/sports"));
 
 // mLab-mongodb_uri: mongodb://heroku_q6dz8j24:mvjltvv262pb7f9ftr9bc5hemv@dsl51941.mlab.com:51941/heroku_q6dz8j24
 
@@ -151,6 +151,6 @@ app.post("/articles/:id", function(req, res) {
 
 // Listen on port 8080
 // ===============================================================================================
-app.listen(PORT, function() {
-    console.log("App listening on PORT: " + PORT);
+app.listen(port, function() {
+    console.log("App listening on PORT: " + port);
 });
