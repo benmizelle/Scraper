@@ -3,6 +3,7 @@ var bodyParser = require("body-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
 var mongo = require("mongodb");
+var dataURL = process.env.MONGOLAB_URI;
 var Note = require("./models/Note.js");
 var Article = require("./models/Article.js");
 
