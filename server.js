@@ -13,7 +13,7 @@ var cheerio = require("cheerio");
 // Set mongoose to leverage built in JavaScript ES6 Promises
 mongoose.Promise = Promise;
 
-var port = process.env.port || 8080;
+
 var app = express();
 
 
@@ -152,6 +152,6 @@ app.post("/articles/:id", function(req, res) {
 
 // Listen on port 8080
 // ===============================================================================================
-app.listen(port, function() {
-    console.log("App listening on PORT: " + port);
+app.listen(process.env.port, function() {
+    console.log("App listening on PORT: " + process.env.port);
 });
